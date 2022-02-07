@@ -11,4 +11,6 @@ The **Basic** sketch shows how to configure the sensor data rate and full-scale 
 
 I am using a breakout board I designed for the ILPS22QS whose design is available at the OSH Park shared space [here](https://oshpark.com/shared_projects/6DSsyPEF). I used the STM32L476RE ([Dragonfly](https://www.tindie.com/products/tleracorp/dragonfly-stm32l47696-development-board/)) development board for sketch development and testing.
 
+![breadboard](https://user-images.githubusercontent.com/6698410/152866710-c6c06b74-30ec-4170-b119-8afecbaef402.jpg)
+
 Here is an example of the kind of output one can achieve (1 Hz, 16x averaging, low-pass filter at ODR/9). On power on it takes ~9 data points to reach stability. Thereafter, with the breadboard flat on the desktop I collected ~50 data points. Tthen raised the board over my head, ~3 feet above the desk top. I collected another 50 data points, then put the board back down on the desktop and collected the final ~50 data points. I am plotting absolute presure and estimated altitude.
