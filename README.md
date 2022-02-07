@@ -16,7 +16,7 @@ Here is an example of the kind of output one can achieve (*1 Hz, 16x averaging, 
 ![pressure](https://user-images.githubusercontent.com/6698410/152865780-8f2dc6a0-c7d4-4eeb-bbbb-1d0bc9609873.jpg)
 ![altitude](https://user-images.githubusercontent.com/6698410/152865843-5b3621ef-5f8b-4a50-bf40-e741c761cbbd.jpg)
 
-The relative RMS altitude error is ~0.5 foot or so. Plenty good enough to determine whether a person wearing such a sensor has fallen down. At these settings, sensor power usage sould be ~3.5 uA (per the data sheet). So excellent relative height discrimination can be achieved at ultra-low power usage. Presumably, at higher data rate and with more averaging (up to 512X) the jitter could be further reduced but at the cost of more power usage.
+The relative RMS altitude error is ~0.5 foot or so. Plenty good enough to determine whether a person wearing such a sensor has fallen down. At these settings, sensor power usage should be ~3.5 uA (per the data sheet). So excellent relative height discrimination can be achieved at ultra-low power usage. Presumably, at higher data rate and with more averaging (up to 512x) the jitter could be further reduced but at the cost of more power usage.
 
 The ILPS22QS has two output interrupts for pressure threshold alerts which could aid in the detection of "man down" events. But these two pins can also be used as analog inputs for [QVAR](https://www.st.com/resource/en/application_note/an5755-qvar-sensing-channel--stmicroelectronics.pdf) (electric charge variation) using a flex connector with one of several types of [electrodes](https://oshpark.com/shared_projects/Q802dDIE) designed to detect human touch.
 
