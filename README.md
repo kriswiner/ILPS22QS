@@ -16,4 +16,10 @@ I am using a breakout board I designed for the ILPS22QS whose design is availabl
 Here is an example of the kind of output one can achieve (1 Hz, 16x averaging, low-pass filter at ODR/9). On power on it takes ~9 data points to reach stability. Thereafter, with the breadboard flat on the desktop I collected ~50 data points. Tthen raised the board over my head, ~3 feet above the desk top. I collected another 50 data points, then put the board back down on the desktop and collected the final ~50 data points. I am plotting absolute presure and estimated altitude.
 
 ![pressure](https://user-images.githubusercontent.com/6698410/152865780-8f2dc6a0-c7d4-4eeb-bbbb-1d0bc9609873.jpg)
-![altitude]()
+![altitude](https://user-images.githubusercontent.com/6698410/152865843-5b3621ef-5f8b-4a50-bf40-e741c761cbbd.jpg)
+
+The RMS altitude error is ~1 foot or so. Plenty good enough to determine whether a person wearing such a sensor has fallen down.
+
+The ILPS22QS has two output interrupts for pressure threshold alerts which could aid in the detection of "man down" events. But these two pins can also be used as analog inputs for [QVAR](https://www.st.com/resource/en/application_note/an5755-qvar-sensing-channel--stmicroelectronics.pdf) (electric charge variation) using a flex connector with one of several types of [electrodes](https://oshpark.com/shared_projects/Q802dDIE) designed to detect human touch.
+
+I will be testing this functionality next....
