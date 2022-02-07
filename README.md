@@ -5,7 +5,7 @@ The [ILPS22QS](https://www.st.com/resource/en/datasheet/ilps22qs.pdf) barometer 
 
 For man-down applications it is the relative accuracy that matters. The ILPS22QS has a relative accuracy of +/-0.015 hPa compared to +/-0.1 for the LPS22HB (800 - 1100 hPa range at 25 C), almost 7x better. This should allow excellent discrimination of even small height changes.
 
-The **Basic** sketch shows how to configure the sensor data rate and full-scale range, set the averaging and low-pass filter and poll for data at a fixed rate, and then convert the data into properly scaled pressure (mBar) and temperature (degrees Celsius). An estimate of altitude is made from the scaed pressure data and everything is output to the serial monitor at 1 Hz.
+The **Basic** sketch shows how to configure the sensor data rate and full-scale range, set the averaging and low-pass filter and poll for data at a fixed rate, and then convert the data into properly scaled pressure (mBar) and temperature (degrees Celsius). An estimate of altitude is made from the scaled pressure data and all three are output to the serial monitor at 1 Hz.
 
 I am using a breakout board I designed for the ILPS22QS whose design is available at the OSH Park shared space [here](https://oshpark.com/shared_projects/6DSsyPEF). I used the STM32L476RE ([Dragonfly](https://www.tindie.com/products/tleracorp/dragonfly-stm32l47696-development-board/)) development board for sketch development and testing.
 
