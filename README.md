@@ -28,7 +28,7 @@ I was able to make use of both analog inputs, one positive and one negative.
 
 ![AH1](https://user-images.githubusercontent.com/6698410/152895165-3805de8b-382f-4323-8ee6-ae65ade45b0c.jpg)
 
-The positive data was taken using pin AH1 with the same 1 Hz settings as the pressure data above. When I touched the exposed electrode, it took several seconds for the QVAR signal to max out. There was an offset of ~-1.5 mV which was supposed to be eliminated by the offset circuit I included in my design. Obviously something went wrong. I tried both long touch and tapping. The 1 Hz rate meant that in order to get tapping to register at all it had to be more like short touching. The sluggish respone is apparent in the data.
+The positive data was taken using pin AH1 with the same 1 Hz settings as the pressure data above. When I touched the exposed electrode, it took several seconds for the QVAR signal to max out. There was an offset of ~-1.5 mV which was supposed to be eliminated by the offset circuit I included in my design. Obviously something went wrong. I tried both long touch and tapping. The 1 Hz rate meant that in order to get tapping to register at all it had to be more like short touching. The sluggish response is apparent in the data.
 
 ![AH2](https://user-images.githubusercontent.com/6698410/152895183-ae8ce84d-d44b-4bc9-a59a-1c27e1e3fb29.jpg)
 
