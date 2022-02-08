@@ -22,9 +22,8 @@ The ILPS22QS has two output interrupts for pressure threshold alerts which could
 
 ![QVAR Flex](https://user-images.githubusercontent.com/6698410/152896933-a995110e-89d7-4134-a655-0ab321787cdc.jpg)
 
-The **QVAR** sketch simply enables QVAR in register CTRL_REG3 and outputs the scaled output of the pressure registers as the QVAR signal in mV (full scale +/- 18 mV). The application note (AN5755) indicates that it is possible to interleave pressure and QVAR but I couldn't make this work and this interleave mode is not mentioned in the data sheet. This would be a cool capability.
-
-I designed a simple flex electrode after the guidance in the AN as shown here:
+The **QVAR** sketch simply enables QVAR in register CTRL_REG3 and outputs the scaled output of the pressure registers as the QVAR signal in mV (full scale +/- 18 mV). The application note ([AN5755]() indicates that it is possible to interleave pressure and QVAR but I couldn't make this work and this interleave mode is not mentioned in the data sheet. This would be a cool capability.
+The **QVAR** sketch simply enables QVAR in register CTRL_REG3 and outputs the scaled output of the pressure registers as the QVAR signal in mV (full scale +/- 18 mV). The application note ([AN5755](https://www.st.com/resource/en/application_note/an5755-qvar-sensing-channel--stmicroelectronics.pdf)) indicates that it is possible to interleave pressure and QVAR but I couldn't make this work and this interleave mode is not mentioned in the data sheet. This would be a cool capability.
 
 I was able to make use of both analog inputs, one positive and one negative.
 
