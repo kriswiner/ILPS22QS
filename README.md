@@ -20,4 +20,18 @@ The relative RMS altitude error is ~0.5 foot or so. Plenty good enough to determ
 
 The ILPS22QS has two output interrupts for pressure threshold alerts which could aid in the detection of "man down" events. But these two pins can also be used as analog inputs for [QVAR](https://www.st.com/resource/en/application_note/an5755-qvar-sensing-channel--stmicroelectronics.pdf) (electric charge variation) using a flex connector with one of several types of [electrodes](https://oshpark.com/shared_projects/Q802dDIE) designed to detect human touch.
 
-I will be testing this functionality next....
+The **QVAR** sketch simply enables QVAR in register CTRL_REG3 and outputs the scaled output of the pressure registers as the QVAR signal in mV (full scale +/- 18 mV). The application note (AN5755) indicates that it is possible to interleave pressure and QVAR but I couldn't make this work and this interleave mode is not mentioned in th data sheet. This would be a cool capability.
+
+I designed a simple flex electrode after the guidance in the AN as shown here:
+
+I was able to make use of both analog inputs, one positive and one negative.
+
+![AH1]()
+
+The positive data was taken using pin AH1 with the same 1 Hz settings as the pressure data above. When I touched the exposed electrode, it took several seconds for the QVAR signal to max out. There was an offset of ~-1.5 mV which was supposed to be eliminated by the offset circuit I included in my design. Obviously something went wrong. I tried both long touch and tapping. The 1 Hz rate meant that in order to get tapping to register at all it had to be more like short touching. The sluggish respone is apparent in the data.
+
+![AH2]()
+
+The negative data was taken using pin AH2. This time I changed the data rate to 10 Hz. The response was much crisper and I was able to get something pretty close to a tap to work. For accelerometers, tap detection is only reliable at 200 Hz or so. For QVAR, even 10 Hz seems to work well enough, but maybe 25 Hz would be better. Still, the lower rate one can run the sensor the lower the power usage.
+
+I hae a new flex electrode design coming from OSH Park and next test will be using two electrodes at once, one on each input, to generate positive and negative touch data. After that, I would like to explosre sliding touch sensors to see if more sophisticated touch sensing can be done...
