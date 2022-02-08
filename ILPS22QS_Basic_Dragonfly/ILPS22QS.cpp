@@ -66,7 +66,8 @@ int32_t ILPS22Q::readAltimeterPressure()
 {
     uint8_t rawData[3];  // 24-bit pressure register data stored here
     _i2c_bus->readBytes(ILPS22Q_ADDRESS, ILPS22Q_PRESS_OUT_XL, 3, &rawData[0]);  
-    return (int32_t) ((int32_t) rawData[2] << 16 | (int32_t) rawData[1] << 8 | rawData[0]);
+     int32_t temp = (int32_t) ((int32_t) rawData[2] << 24 | (int32_t) rawData[1] << 16 | rawData[0] << 8);
+     return (temp >> 8);
 }
 
 int16_t ILPS22Q::readAltimeterTemperature()
