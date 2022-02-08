@@ -93,4 +93,6 @@ void ILPS22Q::Init(uint8_t PODR, uint8_t AVG, uint8_t MODE, uint8_t LPF)
   // make sure data not updated during read by setting block data udate (bit 3) to 1    
     _i2c_bus->writeByte(ILPS22Q_ADDRESS, ILPS22Q_CTRL_REG2, MODE << 6 | LPF << 5 | 0x10 | 0x08);     
     _i2c_bus->writeByte(ILPS22Q_ADDRESS, ILPS22Q_CTRL_REG3, 0x01);  // enable auto increment of register addresses
+  
+    _i2c_bus->writeByte(ILPS22Q_ADDRESS, ILPS22Q_QVAR_DISABLE, 0x00);  // disable QVAR
 }
