@@ -25,7 +25,7 @@ I2Cdev                   i2c_0(&I2C_BUS);              // Instantiate the I2Cdev
 
 
 #define SerialDebug true  // set to true to get Serial output for debugging
-#define myLed 26
+#define myLed 13
 
 const char        *build_date = __DATE__;   // 11 characters MMM DD YYYY
 const char        *build_time = __TIME__;   // 8 characters HH:MM:SS
