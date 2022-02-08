@@ -30,7 +30,7 @@ I was able to make use of both analog inputs, one positive and one negative.
 
 The positive data was taken using pin AH1 with the same 1 Hz settings as the pressure data above. When I touched the exposed electrode, it took several seconds for the QVAR signal to max out. There was an offset of ~-1.5 mV which was supposed to be eliminated by the offset circuit I included in my design. Obviously something went wrong. I tried both long touch and tapping. The 1 Hz rate meant that in order to get tapping to register at all it had to be more like short touching. The sluggish respone is apparent in the data.
 
-![AH2]()
+![AH2](https://user-images.githubusercontent.com/6698410/152895183-ae8ce84d-d44b-4bc9-a59a-1c27e1e3fb29.jpg)
 
 The negative data was taken using pin AH2. This time I changed the data rate to 10 Hz. The response was much crisper and I was able to get something pretty close to a tap to work. For accelerometers, tap detection is only reliable at 200 Hz or so. For QVAR, even 10 Hz seems to work well enough, but maybe 25 Hz would be better. Still, the lower rate one can run the sensor the lower the power usage.
 
