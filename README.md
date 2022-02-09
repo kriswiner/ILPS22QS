@@ -1,7 +1,7 @@
 # ILPS22QS
  Latest ST Microelectronics high-accuracy barometer with embedded QVAR touch sensing.
 
-The [ILPS22QS](https://www.st.com/resource/en/datasheet/ilps22qs.pdf) barometer has a FIFO as well as low-pass filter and averaging and provides much higher accuracy than its predecesor, the LPS22HB: uncalibrated absolute pressure accuracy of 0.5 hPa (0.5 mBar) and low-pressure noise of 0.34 Pa while allowing for data rates from 1 to 200 Hz. Compare with the LPS22HS: 1 hPa uncalibrated absolute pressure accuracy, 0.75 Pa low-pressure noise with data rates from 1 to 75 Hz.
+The [ILPS22QS](https://www.st.com/resource/en/datasheet/ilps22qs.pdf) barometer has a FIFO as well as low-pass filter and averaging and provides much higher accuracy than its predecesor, the LPS22HB: uncalibrated absolute pressure accuracy of 0.5 hPa (0.5 mBar) and low-pressure noise of 0.34 Pa while allowing for data rates from 1 to 200 Hz. Compare with the LPS22HB: 1 hPa uncalibrated absolute pressure accuracy, 0.75 Pa low-pressure noise with data rates from 1 to 75 Hz.
 
 For man-down applications it is the relative accuracy that matters. The ILPS22QS has a relative accuracy of +/-0.015 hPa compared to +/-0.1 for the LPS22HB (800 - 1100 hPa range at 25 C), almost 7x better. This should allow excellent discrimination of even small height changes.
 
